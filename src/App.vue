@@ -1,27 +1,62 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <TodoList></TodoList>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
-import HelloWorld from "./components/HelloWorld.vue";
-
+import TodoList from "./components/TodoList.vue";
 @Options({
   components: {
-    HelloWorld,
+    TodoList,
   },
 })
 export default class App extends Vue {}
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@media only screen and (min-width: 1091px) and (max-width: 4000px) {
+  body {
+    background: url(./assets/background.png);
+    height: 760px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: rgb(253, 254, 227);
+    text-align: center;
+    font-family: "Encode Sans Expanded", sans-serif;
+  }
+}
+@media only screen and (min-width: 620px) and (max-width: 1090px) {
+  body {
+    background: url(./assets/background.png);
+    height: 760px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: rgb(253, 254, 227);
+    text-align: center;
+    font-family: "Encode Sans Expanded", sans-serif;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  body {
+    background: url(./assets/background.png);
+    height: 760px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-align: center;
+    font-family: "Encode Sans Expanded", sans-serif;
+  }
 }
 </style>
